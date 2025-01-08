@@ -9,13 +9,34 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context){
 
+
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar( title: Text('앱제목'), backgroundColor: Colors.blue),
-        body : Container(color: Colors.white),
-        bottomNavigationBar: BottomAppBar(color: Colors.white ,
-            child: Row(children: [Icon(Icons.phone), Icon(Icons.message), Icon(Icons.contact_page)], mainAxisAlignment: MainAxisAlignment.spaceAround,))
-           ),
-        );
+       appBar: AppBar(backgroundColor: Colors.white,title : TextButton.icon(onPressed: (){}, icon : Icon(Icons.arrow_drop_down), iconAlignment: IconAlignment.end, label: Text('금호동 3가', style : TextStyle(color : Colors.black))),
+           actions : [IconButton(icon : Icon(Icons.search, color : Colors.black), onPressed: (){}),
+            IconButton(icon : Icon(Icons.menu, color : Colors.black), onPressed: (){}),
+            IconButton(icon : Icon(Icons.notifications, color : Colors.black), onPressed: (){}),
+          ] ),
+        body : Column(
+          children: [
+            Container(height : 200, decoration: BoxDecoration(border : Border.all(color : Color(0xf8b8888)), color : Colors.white), padding : EdgeInsets.all(10),child : Row(children: [Image.asset('galaxy.png', height: 190, width : 190),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start , children : [Text('캐논 DSLR 100D (단렌즈, 충전기 16기가SD 포함)', style : TextStyle(fontSize : 15)),
+                  Text('성동구 행당동 * 끌올 10분 전', style : TextStyle(fontSize: 10)), Text('210,000원'), Row(crossAxisAlignment: CrossAxisAlignment.end ,children : [Icon(Icons.favorite), Text('4')])]),
+              ),
+            ]),
+            ),
+            Container(height : 200, decoration: BoxDecoration(border : Border.all(color : Color(0xf8b8888)), color : Colors.white), padding : EdgeInsets.all(10), child : Row(children: [Image.asset('iphone.png', height: 190, width : 190),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start ,children : [Text('캐논 DSLR 100D (단렌즈, 충전기 16기가SD 포함)', style: TextStyle(fontSize:15)),
+                  Text('성동구 행당동 * 끌올 10분 전', style : TextStyle(fontSize:10)), Text('210,000원', textAlign: TextAlign.left), Row(crossAxisAlignment: CrossAxisAlignment.end, children : [Icon(Icons.favorite), Text('4')])]),
+              )
+            ]),
+            )]
+      ),
+      )
+    );
   }
 }
