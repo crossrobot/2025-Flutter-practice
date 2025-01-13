@@ -19,21 +19,37 @@ class MyApp extends StatelessWidget {
           ] ),
         body : Column(
           children: [
-            Container(height : 200, decoration: BoxDecoration(border : Border.all(color : Color(0xf8b8888)), color : Colors.white), padding : EdgeInsets.all(10),child : Row(children: [Image.asset('galaxy.png', height: 190, width : 190),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start , children : [Text('캐논 DSLR 100D (단렌즈, 충전기 16기가SD 포함)', style : TextStyle(fontSize : 15)),
-                  Text('성동구 행당동 * 끌올 10분 전', style : TextStyle(fontSize: 10)), Text('210,000원'), Row(crossAxisAlignment: CrossAxisAlignment.end ,children : [Icon(Icons.favorite), Text('4')])]),
-              ),
-            ]),
+            Container(height : 200, decoration: BoxDecoration(border : Border.all(color : Color(0xf8b8888)), color : Colors.white), padding : EdgeInsets.all(10),
+              child : Row(
+                  children: [Image.asset('galaxy.png', height: 190, width : 190),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start ,
+                          children : [
+                            Text('갤럭시 Ultra', style : TextStyle(fontSize : 15)),
+                            Text('대전지 유성구 어은동 * 끌올 10분 전', style : TextStyle(fontSize: 10)),
+                            Text('210,000원'),
+                            Row(mainAxisAlignment: MainAxisAlignment.end ,
+                                children : [Icon(Icons.favorite), Text('4')])
+                          ]),
+                    ),
+                  ]),
             ),
-            Container(height : 200, decoration: BoxDecoration(border : Border.all(color : Color(0xf8b8888)), color : Colors.white), padding : EdgeInsets.all(10), child : Row(children: [Image.asset('iphone.png', height: 190, width : 190),
-              Padding(
+            Container(height : 200, decoration: BoxDecoration(border : Border.all(color : Color(0xf8b8888)), color : Colors.white), padding : EdgeInsets.all(10),
+              child :
+              Row(children: [Image.asset('iphone.png', height: 190, width : 190),
+                Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start ,children : [Text('캐논 DSLR 100D (단렌즈, 충전기 16기가SD 포함)', style: TextStyle(fontSize:15)),
-                  Text('성동구 행당동 * 끌올 10분 전', style : TextStyle(fontSize:10)), Text('210,000원', textAlign: TextAlign.left), Row(crossAxisAlignment: CrossAxisAlignment.end, children : [Icon(Icons.favorite), Text('4')])]),
-              )
-            ]),
+                  child:
+                  Column(crossAxisAlignment: CrossAxisAlignment.start ,children : [
+                    Text('아이폰 15 Pro', style: TextStyle(fontSize:15)),
+                    Text('대전지 유성구 봉명동 * 끌올 7분 전', style : TextStyle(fontSize:10)),
+                    Text('240,000원', textAlign: TextAlign.left),
+                    Row(mainAxisAlignment: MainAxisAlignment.end,
+                      children : [Icon(Icons.favorite), Text('4')])]
+                  ),
+                )
+              ]),
             )]
       ),
       )
